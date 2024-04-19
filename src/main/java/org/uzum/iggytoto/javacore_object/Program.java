@@ -24,5 +24,10 @@ public class Program {
         System.out.println(person1.equals(null));
         System.out.println(person1.equals(person3));
         System.out.println(person1.equals(person1Clone));
+
+        final Email  e  =new Email();
+
+        System.out.println(e.getValue());
+
     }
 }
