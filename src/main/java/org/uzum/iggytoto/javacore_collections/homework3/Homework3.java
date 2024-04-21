@@ -13,7 +13,7 @@ public class Homework3 {
      * @param text - заданный текст
      * @return - словарь слов и количество их появлений в данном тексте
      */
-    public Map<String, Integer> countWords(String text) {
+    public Map<String,Integer> countWords(String text){
         /// Тут надо писать код связанный с домашним заданием #3
         return new HashMap<>();
     }
