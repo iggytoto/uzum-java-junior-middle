@@ -2,9 +2,10 @@ package org.uzum.iggytoto.javacore_streams;
 
 import org.uzum.iggytoto.javacore_streams.model.Person;
 
-import java.util.HashMap;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
@@ -23,7 +24,34 @@ public class Homework3_2 {
      * @param removeDupes - флаг отвечающий за исключение дубликатов из результата
      * @return словарь где ключ хобби а значение лист персон с этим хобби
      */
-    public Map<Integer, List<Person>> groupByAge(List<Person> persons, int minimalAgeFilter,  boolean removeDupes) {
-        return new HashMap<>();
+    public Map<Integer, List<Person>> groupByAge(List<Person> persons, int minimalAgeFilter, boolean removeDupes) {
+        if (removeDupes) {
+            persons = persons.stream().distinct().toList();
+        }
+        return persons.stream()
+                .filter(person -> person.getAge() >= minimalAgeFilter)
+                .collect(Collectors.groupingBy(Person::getAge));
+    }
+
+
+    public Map<Integer, List<Person>> groupByAgeAndRemoveDupesByName(List<Person> persons, int minimalAgeFilter, boolean removeDupes) {
+        ArrayList<String> list = new ArrayList<>();
+
+        Predicate<Person> checkDupes = person -> {
+            if (list.contains(person.getName())) {
+                return false;
+            } else {
+                list.add(person.getName());
+                return true;
+            }
+        };
+
+        if (removeDupes) {
+            persons = persons.stream().filter(checkDupes).toList();
+        }
+
+        return persons.stream()
+                .filter(person -> person.getAge() >= minimalAgeFilter)
+                .collect(Collectors.groupingBy(Person::getAge));
     }
 }
