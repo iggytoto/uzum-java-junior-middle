@@ -1,13 +1,12 @@
 package org.uzum.iggytoto.javacore_collections.homework3;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Random;
 
-class Homework3Test {
+class Homework31Test {
 
     private static String TEXT = "— Она несла в руках отвратительные, тревожные желтые цветы. Черт их знает, как их зовут, но они первые почему-то появляются в Москве. И эти цветы очень отчетливо выделялись на черном ее весеннем пальто. Она несла желтые цветы! Нехороший цвет. Она повернула с Тверской в переулок и тут обернулась. Ну, Тверскую вы знаете? По Тверской шли тысячи людей, но я вам ручаюсь, что увидела она меня одного и поглядела не то что тревожно, а даже как будто болезненно. И меня поразила не столько ее красота, сколько необыкновенное, никем не виданное одиночество в глазах!\n" +
             "Повинуясь этому желтому знаку, я тоже свернул в переулок и пошел по ее следам. Мы шли по кривому, скучному переулку безмолвно, я по одной стороне, а она по другой. И не было, вообразите, в переулке ни души. Я мучился, потому что мне показалось, что с нею необходимо говорить, и тревожился, что я не вымолвлю ни одного слова, а она уйдет, и я никогда ее более не увижу.\n" +
@@ -35,7 +34,7 @@ class Homework3Test {
 
     @Test
     public void hw3Test() {
-        var o = new Homework3();
+        var o = new Homework3_1();
 
         var result = o.countWords(TEXT);
 
@@ -383,7 +382,7 @@ class Homework3Test {
         }
 
 
-        final var result = new Homework3().countWords(String.join(" ", expected.keySet()));
+        final var result = new Homework3_1().countWords(String.join(" ", expected.keySet()));
 
         for (var k : expected.keySet()) {
             Assertions.assertEquals(result.get(k),1);

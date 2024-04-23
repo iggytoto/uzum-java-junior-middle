@@ -41,6 +41,21 @@ public final class PersonBuilder
         return new Person("Anthony", 30, toList("Drawing", "Cycling", "Swimming"), family);
     }
 
+    public static Person getArnold(){
+        Map<String, String> family = new HashMap<>();
+        return new Person("Arnold", 30, toList("Workout", "Acting", "Swimming"), family);
+    }
+
+    public static Person getTom(){
+        Map<String, String> family = new HashMap<>();
+        return new Person("Tom", 30, toList("Eating", "Sleeping", "Walking"), family);
+    }
+
+    public static Person getCat(){
+        Map<String, String> family = new HashMap<>();
+        return new Person("Cat", 30, toList("Eating", "Sleeping", "Walking"), family);
+    }
+
     private static List<String> toList(String... hobbies)
     {
         return Stream.of(hobbies).collect(Collectors.toList());
