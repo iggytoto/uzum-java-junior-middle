@@ -14,7 +14,6 @@ public class RunnableExample {
             this.countTo = countTo;
         }
 
-
         @Override
         public void run() {
             var i = 0;

@@ -2,8 +2,10 @@ package org.uzum.iggytoto.javacore_threads;
 
 public class ThreadsExample {
     public static void main(String[] args) {
-        final SecondsCounter t = new SecondsCounter(10);
-        t.start();
+        while (true){
+            final SecondsCounter t = new SecondsCounter(1000);
+            t.start();
+        }
     }
 
     public static class SecondsCounter extends Thread {
