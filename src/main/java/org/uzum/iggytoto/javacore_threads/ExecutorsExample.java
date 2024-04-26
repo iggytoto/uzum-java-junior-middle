@@ -1,4 +1,4 @@
-package org.uzum.iggytoto.javacore_executors;
+package org.uzum.iggytoto.javacore_threads;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
