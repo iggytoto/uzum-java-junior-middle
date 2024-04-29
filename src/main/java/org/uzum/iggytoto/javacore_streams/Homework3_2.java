@@ -23,6 +23,9 @@ public class Homework3_2 {
      * @return словарь где ключ хобби а значение лист персон с этим хобби
      */
     public Map<Integer, List<Person>> groupByAge(List<Person> persons, int minimalAgeFilter,  boolean removeDupes) {
-        return new HashMap<>();
+        return persons.stream()
+                .filter(person -> person.getAge() >= minimalAgeFilter) // Filter by age
+                .distinct()                        // Remove duplicates (if needed)
+                .collect(Collectors.groupingBy(Person::getAge));
     }
 }
