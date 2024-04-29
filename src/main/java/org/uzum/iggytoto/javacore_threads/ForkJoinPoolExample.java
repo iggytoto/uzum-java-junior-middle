@@ -4,9 +4,12 @@ import java.time.Instant;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.RecursiveTask;
 
-public class WorkStealingPoolExample {
+public class ForkJoinPoolExample {
 
     public static void main(String[] args){
+
+        System.out.println(Runtime.getRuntime().availableProcessors());
+
 
         int[] array = new int[100000];
 
