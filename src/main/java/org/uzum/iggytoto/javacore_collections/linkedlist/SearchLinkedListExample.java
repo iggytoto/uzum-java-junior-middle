@@ -1,6 +1,8 @@
 package org.uzum.iggytoto.javacore_collections.linkedlist;
 
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.List;
 
 public class SearchLinkedListExample {
     public static void main(String[] args) {
@@ -23,5 +25,6 @@ public class SearchLinkedListExample {
         // Find the index of the last occurrence of an element in the LinkedList
         System.out.println("lastIndexOf \"David\" : " + employees.lastIndexOf("David"));
         System.out.println("lastIndexOf \"Bob\" : " + employees.lastIndexOf("Bob"));
+
     }
 }

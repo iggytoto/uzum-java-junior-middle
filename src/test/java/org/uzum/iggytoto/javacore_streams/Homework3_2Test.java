@@ -44,6 +44,15 @@ class Homework3_2Test {
         assertTrue(result.containsKey(30));
         assertEquals(2, result.get(25).size());
         assertEquals(1, result.get(30).size());
+
+        // Test grouping by age with removing duplicates
+        persons = List.of(person1,person1,person2,person3);
+        result = processor.groupByAge(persons, 0, false);
+        assertEquals(2, result.size());
+        assertTrue(result.containsKey(25));
+        assertTrue(result.containsKey(30));
+        assertEquals(3, result.get(25).size());
+        assertEquals(1, result.get(30).size());
     }
 
 
