@@ -14,23 +14,7 @@ public class Homework3_1 {
      * @return - словарь слов и количество их появлений в данном тексте
      */
     public Map<String,Integer> countWords(String text){
-        // method converts all words in to lower case for case-insensitivity
-        text = text.toLowerCase();
+        return Map.of();
 
-        // method replaces all punctual characters with space
-        text = text.replaceAll("\\p{Punct}", " ");
-
-        // method splits the text into words based on whitespace
-        String[] words = text.split("\\s+");
-
-        Map<String, Integer> wordCounts = new HashMap<>();
-
-        for (String word : words) {
-            if (!word.isEmpty()) {
-                wordCounts.put(word, wordCounts.getOrDefault(word, 0) + 1);
-            }
-        }
-
-        return wordCounts;
     }
 }
