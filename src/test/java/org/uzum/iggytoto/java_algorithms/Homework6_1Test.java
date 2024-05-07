@@ -14,7 +14,7 @@ public class Homework6_1Test {
         Assertions.assertEquals(3, hw.maxDepth(getExample1()));
         Assertions.assertEquals(5, hw.maxDepth(getExample2()));
         Assertions.assertThrows(IllegalArgumentException.class, () -> hw.maxDepth(null));
-        Assertions.assertEquals(0, hw.maxDepth(new Homework6_1.Node(1)));
+        Assertions.assertEquals(1, hw.maxDepth(new Homework6_1.Node(1)));
     }
 
     private Homework6_1.Node getExample2() {
