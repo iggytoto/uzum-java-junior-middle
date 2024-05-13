@@ -53,6 +53,7 @@ public class Homework6_1Test {
     private Homework6_1.Node getExample1() {
         return new Homework6_1.Node(1,
                 List.of(
+
                         new Homework6_1.Node(3,
                                 List.of(new Homework6_1.Node(5), new Homework6_1.Node(6))),
                         new Homework6_1.Node(2),
